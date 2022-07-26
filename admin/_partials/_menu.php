@@ -77,10 +77,10 @@
     <div class="collapse" id="evaluasi">
       <ul class="nav sub-menu">
         <li class="nav-item">
-          <a href="?hal=evaluasi/lulus" class="nav-link">Daftar Lulus</a>
+          <a href="?hal=laporan/filter-daftar" class="nav-link">Lap. Pendafatran</a>
         </li>
         <li class="nav-item">
-          <a href="?hal=evaluasi/do" class="nav-link">Daftar DO</a>
+          <a href="?hal=laporan/filter-bayar" class="nav-link">Lap. Pembayaran</a>
         </li>
       </ul>
     </div>

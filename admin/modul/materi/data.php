@@ -12,8 +12,7 @@
 				<h6 class="card-title">
 					<div class="row">
 					 <div class="col-sm-3">Data Materi Siswa
-					 	<?= _tambah("?hal=dataset/import") ?>
-							
+						
 						</div>
 
 					 <div class="col-sm-4">

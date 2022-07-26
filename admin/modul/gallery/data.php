@@ -9,39 +9,35 @@
 	<div class="col-md-12 grid-margin stretch-card">
 		<div class="card">
 			<div class="card-body">
-				<h6 class="card-title">Data Guru
-					<?= _tambah("?hal=guru/olah") ?>
+				<h6 class="card-title">Data Gallery
+					<?= _tambah("?hal=gallery/olah") ?>
 				</h6>
 				<div class="table-responsive">
 					<table id="dataTableExample" class="table">
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>Nama</th>
-								<th>Pendidikan</th>
-								<th>Deskripsi</th>
-								<th>Gambar</th>
+								<th>Judul</th>
+								<th>Foto</th>
 								<th>#</th>
 							</tr>
 						</thead>
 						<tbody>
 							<?php
 							$no = 0;
-							$sql = "SELECT * FROM tb_guru";
+							$sql = "SELECT * FROM tb_gallery";
 							foreach (_dataGetAll($mysqli, $sql) as $key => $value) :
 								extract($value);
 							?>
 								<tr>
 									<td><?= $no += 1 ?></td>
-									<td><?= $nama ?></td>
-									<td><?= $pendidikan ?></td>
-									<td style="word-break:break-word"><?=  mb_strimwidth($deskripsi, 0, 50, " ...") ?></td>
+									<td><?= $judul ?></td>
 									<td>
-										<img src="../user/images/guru/<?=$foto?>" class="rounded" alt="Foto">
+										<img src="../user/images/gallery/<?=$foto?>" class="rounded" alt="Gallery">
 									</td>
 									<td>
-										<?= _edit("?hal=guru/olah&id=$idguru") ?> 
-										<?= _hapus("?hal=guru/proses&hapus=$idguru") ?>
+										<?= _edit("?hal=gallery/olah&id=$idgallery") ?> 
+										<?= _hapus("?hal=gallery/proses&hapus=$idgallery") ?>
 									</td>
 								</tr>
 							<?php endforeach; ?>

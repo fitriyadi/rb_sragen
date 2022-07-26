@@ -10,7 +10,7 @@
 		<div class="card">
 			<div class="card-body">
 				<h6 class="card-title">Data Blog
-					<?= _tambah("?hal=dataset/import") ?>
+					<?= _tambah("?hal=blog/olah") ?>
 				</h6>
 				<div class="table-responsive">
 					<table id="dataTableExample" class="table">
