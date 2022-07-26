@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/vendors/select2/select2.min.css">
+
 <link rel="stylesheet" href="../assets/vendors/core/core.css">
 <!-- endinject -->
 <!-- plugin css for this page -->
@@ -15,6 +17,7 @@
 
 <!-- Sweet Alert -->
 <link rel="stylesheet" href="../assets/vendors/sweetalert2/sweetalert2.min.css">
+
 
 <style type="text/css">
 	.form-group{

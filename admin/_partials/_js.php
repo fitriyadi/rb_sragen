@@ -18,3 +18,6 @@
 
 <script src="../assets/vendors/tinymce/tinymce.min.js"></script>
 <script src="../assets/js/tinymce.js"></script>
+
+<script src="../assets/vendors/select2/select2.min.js"></script>
+<script src="../assets/js/select2.js"></script>

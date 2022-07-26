@@ -10,7 +10,7 @@
 		<div class="card">
 			<div class="card-body">
 				<h6 class="card-title">Data Program
-					<?= _tambah("?hal=dataset/import") ?>
+					<?= _tambah("?hal=program/olah") ?>
 				</h6>
 				<div class="table-responsive">
 					<table id="dataTableExample" class="table">

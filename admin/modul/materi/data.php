@@ -11,20 +11,16 @@
 			<div class="card-body">
 				<h6 class="card-title">
 					<div class="row">
-					 <div class="col-sm-3">Data Materi Siswa
-						
-						</div>
-
+					 <div class="col-sm-3">Data Materi Siswa</div>
 					 <div class="col-sm-4">
-						<select class="select2 w-100" name="jk">
-                             
-                                    <option value="Pilih Mater">- Pilih Materi-</option>
-                               
+						<select class="select2 w-100" name="idprogram">
+                            <option value="Pilih Mater">- Semua Materi -</option>
                          </select>
                      </div>
                      <div class="col-sm-4">
 					<?= _cari("?hal=dataset/import") ?>
-					<?= _tambah("?hal=dataset/import") ?>
+					
+					<?= _tambah("?hal=materi/olah") ?>
 				</div>
 				
 				</div>
@@ -55,7 +51,7 @@
 									<td><?= tgl_indo($tanggal) ?></td>
 									<td><?=  mb_strimwidth($deskripsi, 0, 30, " ...") ?></td>
 									<td>
-										<?= _download("?hal=materi/proses&hapus=$idmateri") ?>
+										<?= _download($link) ?>
 										<?= _edit("?hal=materi/olah&id=$idmateri") ?> 
 										<?= _hapus("?hal=materi/olah&id=$idmateri") ?> 
 										

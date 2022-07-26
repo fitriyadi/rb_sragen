@@ -56,7 +56,7 @@ if (isset($_POST['tambah'])) {
 		"sssss",
 		$_POST['nama'],
 		$_POST['pendidikan'],
-		$foto,
+		$name,
 		$_POST['deskripsi'],
 		$_POST['idguru']
 	);

@@ -8,8 +8,8 @@ $pass=$_POST['password'];
 
 //Pengecekan ada data dalam login tidak
 $sqladmin="Select idpengguna from tb_pengguna where username='$user' and password='$pass' and level='Admin'";
-$sqlkasir="Select idpengguna from tb_pengguna where username='$user' and password='$pass' and level='Kasir'";
-$sqlpemilik="Select idpengguna from tb_pengguna where username='$user' and password='$pass' and level='Pemilik'";
+
+$sqlkepala="Select idpengguna from tb_pengguna where username='$user' and password='$pass' and level='Kepala'";
 
 if (_cekData($mysqli,$sqladmin)== true){
 	//JIka data ditemukan
@@ -17,17 +17,12 @@ if (_cekData($mysqli,$sqladmin)== true){
 	echo "<script>alert('Anda login sebagai Admin')</script>";
 	echo "<script>window.location='admin/index.php?hal=dashboard';</script>";
 
-}else if(_cekData($mysqli,$sqlkasir)== true){
-	//JIka data ditemukan
-	$_SESSION['guru']=_dataCustom($mysqli,$sqlkasir);
-	echo "<script>alert('Anda login sebagai Kasir')</script>";
-	echo "<script>window.location='guru/index.php?hal=dashboard';</script>";
 
-}else if(_cekData($mysqli,$sqlpemilik)== true){
+}else if(_cekData($mysqli,$sqlkepala)== true){
 	//JIka data ditemukan
-	$_SESSION['siswa']=_dataCustom($mysqli,$sqlpemilik);
+	$_SESSION['siswa']=_dataCustom($mysqli,$sqlkepala);
 	echo "<script>alert('Anda login sebagai Pemilik')</script>";
-	echo "<script>window.location='siswa/index.php?hal=dashboard';</script>";
+	echo "<script>window.location='kepala/index.php?hal=dashboard';</script>";
 
 }else{
 		//Jika tidak ditemukan

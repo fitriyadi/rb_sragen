@@ -1,3 +1,10 @@
+        <?php
+  require_once '../setting/konstanta.php';
+  require_once '../setting/koneksi.php';
+  require_once '../setting/crud.php';
+  require_once '../setting/helper.php';
+?>
+
         <div class="container mb-3">
           <div class="d-flex align-items-center">
             <div class="site-logo mr-auto">
@@ -24,7 +31,7 @@
 
                           <nav class="site-navigation text-left mr-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav mr-auto ">
-                  <li class="active"><a href="index.html" class="nav-link">Home</a></li>
+                  <li><a href="index.php" class="nav-link">Home</a></li>
                    <li class="dropdown">
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profil <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">

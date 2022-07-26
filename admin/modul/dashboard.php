@@ -17,13 +17,13 @@
 									<i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-									<a class="dropdown-item d-flex align-items-center" href="?hal=dataset/data"><i data-feather="eye" class="icon-sm mr-2"></i> <span class="">View</span></a>
+									<a class="dropdown-item d-flex align-items-center" href="?hal=pendaftaran/data"><i data-feather="eye" class="icon-sm mr-2"></i> <span class="">View</span></a>
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-6 col-md-12 col-xl-5">
-								<h3 class="mb-2">21</h3>
+								<h3 class="mb-2"><?=_dataCount($mysqli,"select * from tb_siswa")?></h3>
 							</div>
 							<div class="col-6 col-md-12 col-xl-7">
 								<div id="apexChart1" class="mt-md-3 mt-xl-0"></div>
@@ -42,13 +42,13 @@
 									<i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
-									<a class="dropdown-item d-flex align-items-center" href="?hal=siswa/data"><i data-feather="eye" class="icon-sm mr-2"></i> <span class="">View</span></a>
+									<a class="dropdown-item d-flex align-items-center" href="?hal=program/data"><i data-feather="eye" class="icon-sm mr-2"></i> <span class="">View</span></a>
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-6 col-md-12 col-xl-5">
-								<h3 class="mb-2">15</h3>
+								<h3 class="mb-2"><?=_dataCount($mysqli,"select * from tb_program")?></h3>
 							</div>
 							<div class="col-6 col-md-12 col-xl-7">
 								<div id="apexChart2" class="mt-md-3 mt-xl-0"></div>
@@ -67,13 +67,13 @@
 									<i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
 								</button>
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
-									<a class="dropdown-item d-flex align-items-center" href="?hal=hasil/data"><i data-feather="eye" class="icon-sm mr-2"></i> <span class="">View</span></a>
+									<a class="dropdown-item d-flex align-items-center" href="?hal=pembayaran/data"><i data-feather="eye" class="icon-sm mr-2"></i> <span class="">View</span></a>
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-6 col-md-12 col-xl-5">
-								<h3 class="mb-2">11</h3>
+								<h3 class="mb-2"><?=_dataCount($mysqli,"select * from tb_siswa_daftar")?></h3>
 							</div>
 							<div class="col-6 col-md-12 col-xl-7">
 								<div id="apexChart2" class="mt-md-3 mt-xl-0"></div>

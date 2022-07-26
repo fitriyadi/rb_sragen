@@ -9,25 +9,9 @@
 	<div class="col-md-12 grid-margin stretch-card">
 		<div class="card">
 			<div class="card-body">
-				<h6 class="card-title">
-					<div class="row">
-					 <div class="col-sm-3">Data pendaftaran Siswa
+				<h6 class="card-title">Data pendaftaran Siswa
 							
-						</div>
-
-					 <div class="col-sm-4">
-						<select class="select2 w-100" name="jk">
-                             
-                                    <option value="Pilih Mater">- Pilih Materi-</option>
-                               
-                         </select>
-                     </div>
-                     <div class="col-sm-4">
-					<?= _cari("?hal=dataset/import") ?>
-					<?= _tambah("?hal=dataset/import") ?>
-				</div>
-				
-				</div>
+					<?= _tambah("?hal=pendaftaran/olah") ?>
 				</h6>
 				<div class="table-responsive">
 					<table id="dataTableExample" class="table">

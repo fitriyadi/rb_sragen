@@ -5,7 +5,7 @@ function _proses($link){
 }
 
 function _download($link){
-	echo "<a href='$link' class='btn btn-primary btn-sm'>Download</a>";
+	echo "<a href='$link' target='_blank' class='btn btn-primary btn-sm'>Download</a>";
 }
 
 function _khs($link){
