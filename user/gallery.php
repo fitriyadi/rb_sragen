@@ -52,7 +52,7 @@
 
             <div class="col-md-5 mt-5 pt-5">
               <span class="text-cursive h5 text-red">Gallery</span>
-              <h1 class="mb-3 font-weight-bold text-teal">Gallery Of Kids</h1>
+              <h1 class="mb-3 font-weight-bold text-teal">Gallery Kita</h1>
               <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Gallery</strong></p>
             </div>
             
@@ -70,102 +70,28 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 mb-4">
-            <a href="images/gallery/kegiatan1.jpg" data-fancybox="gal"><img src="images/gallery/kegiatan1.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-md-3 mb-4">
-            <a href="images/gallery/kegiatan2.jpg" data-fancybox="gal"><img src="images/gallery/kegiatan2.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-md-3 mb-4">
-            <a href="images/gallery/kegiatan3.jpg" data-fancybox="gal"><img src="images/gallery/kegiatan3.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-md-3 mb-4">
-            <a href="images/gallery/kegiatan4.jpg" data-fancybox="gal"><img src="images/gallery/kegiatan4.jpg" alt="Image" class="img-fluid"></a>
-          </div>
 
-          <div class="col-md-3 mb-4">
-            <a href="images/gallery/kegiatan5.jpg" data-fancybox="gal"><img src="images/gallery/kegiatan5.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-md-3 mb-4">
-            <a href="images/gallery/kegiatan6.jpg" data-fancybox="gal"><img src="images/gallery/kegiatan6.jpg" alt="Image" class="img-fluid"></a>
+           <?php
+              $sql = "SELECT * FROM tb_gallery";
+              foreach (_dataGetAll($mysqli, $sql) as $key => $value) :
+                extract($value);
+              ?>
+                
+              <div class="col-md-3 mb-4">
+                <a href="images/gallery/<?=$foto?>" data-fancybox="gal"><img src="images/gallery/<?=$foto?>" alt="Image" title="<?=$judul?>" class="img-fluid"></a>
+            </div>
+
+            <?php endforeach; ?>
+
           </div>
           </div>
         </div>
       </div>
     </div>
-    
-
-    
-
-
-    <div class="site-section py-5 bg-warning">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 d-flex">
-          <h2 class="text-white m-0">Bring Fun Life To Your Kids</h2>
-          <a href="#" class="btn btn-primary btn-custom-1 py-3 px-5 ml-auto">Get Started</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+      
 
     <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <h2 class="footer-heading mb-3">About Us</h2>
-                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-
-                <h2 class="footer-heading mb-4">Newsletter</h2>
-                <form action="#" class="d-flex" class="subscribe">
-                  <input type="text" class="form-control mr-3" placeholder="Email">
-                  <input type="submit" value="Send" class="btn btn-primary">
-                </form>
-          </div>
-          <div class="col-lg-8 ml-auto">
-            <div class="row">
-              <div class="col-lg-4 ml-auto">
-                <h2 class="footer-heading mb-4">Navigation</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-4">
-                <h2 class="footer-heading mb-4">Navigation</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-                
-              </div>
-
-              
-              
-            </div>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-              <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>.Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
-
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+       <?php require_once '_footer.php'; ?>
     </footer>
 
     </div>
