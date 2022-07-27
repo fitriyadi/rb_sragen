@@ -29,7 +29,8 @@
 						<tbody>
 							<?php
 							$no = 0;
-							$sql = "SELECT * FROM  tb_program join tb_materi using(idprogram)";
+							$kode=$_SESSION['siswa'];
+							$sql = "SELECT * FROM  tb_program join tb_materi using(idprogram) join tb_siswa_daftar using(idprogram) join tb_siswa using(iddaftar) where iddaftar='$kode'";
 							foreach (_dataGetAll($mysqli, $sql) as $key => $value) :
 								extract($value);
 							?>
@@ -40,7 +41,7 @@
 									<td><?= tgl_indo($tanggal) ?></td>
 									<td><?=  mb_strimwidth($deskripsi, 0, 30, " ...") ?></td>
 									<td>
-										<?= _download("?hal=materi/proses&hapus=$idmateri") ?>
+										<?= _download($link) ?>
 										
 									</td>
 								</tr>

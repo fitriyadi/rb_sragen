@@ -37,7 +37,7 @@ if (isset($_POST['tambah'])) {
 
 	if ($stmt->execute()) {
 		echo "<script>alert('Data Siswa berhasil disimpan')</script>";
-		echo "<script>window.location='index.php?hal=pendaftaran/data';</script>";
+		echo "<script>window.location='index.php?hal=profil/olah';</script>";
 	} else {
 		echo "<script>alert('Data Siswa Gagal Disimpan')</script>";
 		echo "<script>window.location='javascript:history.go(-1)';</script>";
@@ -89,7 +89,7 @@ if (isset($_POST['tambah'])) {
 
 	if ($stmt->execute()) {
 		echo "<script>alert('Data Siswa berhasil diubah')</script>";
-		echo "<script>window.location='index.php?hal=pendaftaran/data';</script>";
+		echo "<script>window.location='index.php?hal=profil/olah';</script>";
 	} else {
 		echo "<script>alert('Data Siswa Gagal Disimpan')</script>";
 		echo "<script>window.location='javascript:history.go(-1)';</script>";

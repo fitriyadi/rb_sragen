@@ -1,7 +1,7 @@
 <?php
 $username="";
-if(isset($_GET['id']))
-	extract(_dataGetId($mysqli,"tb_siswa","iddaftar='".$_GET['id']."'"));
+if(isset($_SESSION['siswa']))
+	extract(_dataGetId($mysqli,"tb_siswa","iddaftar='".$_SESSION['siswa']."'"));
 ?>
 <nav class="page-breadcrumb">
 	<ol class="breadcrumb">
@@ -17,7 +17,7 @@ if(isset($_GET['id']))
 			<div class="card-body">
 				<h6 class="card-title"><?=(isset($_GET['id']) ? 'Ubah':'Tambah')?> Data Siswa Daftar</h6>
 
-				<form class="forms-sample" action="?hal=pendaftaran/proses" method="POST" enctype="multipart/form-data">
+				<form class="forms-sample" action="?hal=profil/proses" method="POST" enctype="multipart/form-data">
 					
 					<input type="hidden" class="form-control" name="iddaftar" value="<?=@$iddaftar?>">
 
@@ -188,7 +188,7 @@ if(isset($_GET['id']))
 
 					<div class="form-group row ">
 						<div class="col-sm-9 offset-3">
-							<button type="submit" class="btn btn-primary mr-2" name="<?=(isset($_GET['id']) ? 'ubah':'tambah')?>">Simpan</button>
+							<button type="submit" class="btn btn-primary mr-2" name="ubah">Simpan</button>
 							<a class="btn btn-light" href="?hal=pendaftaran/data">Batal</a>
 						</div>
 					</div>
