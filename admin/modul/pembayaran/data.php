@@ -53,8 +53,8 @@
 									<td><?= tgl_indo($tanggalbayar) ?></td>
 									<td><?= $nama ?></td>
 									<td><?= $dibayar ?></td>
-									<td><?= $jenisbayar ?></td>
-									<td><?= $statusbayar ?></td>
+									<td><?= label_jenis_bayar($jenisbayar) ?></td>
+									<td><?= label_status_bayar($statusbayar) ?></td>
 									<td>
 										<?php if($jenisbayar=='Online'){ ?>
 											<?= _edit("?hal=pembayaran/ubah&id=$iddaftarpaket")?> 

@@ -37,7 +37,7 @@
 									<td><?= $nama ?></td>
 									<td><?= $tempatlahir.", ". tgl_indo($tanggallahir) ?></td>
 									<td><?= $email ?></td>
-									<td><?= $statusdaftar ?></td>
+									<td><?= label_status_daftar($statusdaftar) ?></td>
 									<td>
 										<?= _detail("?hal=pendaftaran/detail&id=$iddaftar") ?> 
 										<?= _edit("?hal=pendaftaran/olah&id=$iddaftar") ?> 

@@ -74,4 +74,21 @@ function label_status_bayar($kode)
     }
 }
 
+function label_status_daftar($kode)
+{
+    switch ($kode) {
+        case 'Langsung':
+            return "<span class='badge badge-success'>Langung</span>";
+            break;
+
+        case 'Online':
+            return "<span class='badge badge-primary'>Online</span>";
+            break;
+
+        default:
+            return "";
+            break;
+    }
+}
+
 ?>
