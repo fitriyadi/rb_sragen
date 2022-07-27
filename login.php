@@ -51,7 +51,7 @@ require_once 'setting/konstanta.php';
 														<input type="submit" class="btn btn-primary mr-2 mb-2 mb-md-0 text-white" name="" value="Login">
 													</div>
 													<div class="mt-3 md-6">
-														<a class="btn btn-success mr-2 mb-2 mb-md-0" href="">Kembali</a>
+														<a class="btn btn-success mr-2 mb-2 mb-md-0" href="user">Situs Utama</a>
 													</div>
 												</div>
 											</form>

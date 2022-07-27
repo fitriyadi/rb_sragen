@@ -50,9 +50,9 @@
           <div class="row align-items-center ">
 
             <div class="col-md-5 mt-5 pt-5">
-              <span class="text-cursive h5 text-red">Contact</span>
-              <h1 class="mb-3 font-weight-bold text-teal">Get In Touch</h1>
-              <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Contact</strong></p>
+              <span class="text-cursive h5 text-red">Pendaftaran</span>
+              <h3 class="mb-3 font-weight-bold text-teal">Bergabung Bersama Kami</h3>
+              <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Pendaftaran</strong></p>
             </div>
             
           </div>
@@ -71,53 +71,76 @@
       </div>
         <div class="row">
           <div class="col-lg-12 mb-0" >
-            <form action="#" method="post">
+            <form action="daftar_proses.php" method="post">
               <div class="form-group row">
                 <div class="col-md-4 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" placeholder="Nama Siswa">
+                  <input type="text" class="form-control" name="nama" placeholder="Nama Siswa">
                 </div>
                 <div class="col-md-4">
-                  <input type="text" class="form-control" placeholder="Tempat Lahir">
+                  <input type="text" class="form-control" name="tempatlahir" placeholder="Tempat Lahir">
                 </div>
                 <div class="col-md-4">
-                  <input type="date" class="form-control" placeholder="Tanggal Lahir">
+                  <input type="date" class="form-control" name="tanggallahir" placeholder="Tanggal Lahir">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-4">
-                  <input type="email" class="form-control" placeholder="Email">
+                  <input type="email" class="form-control" name="email" placeholder="Email">
                 </div>
                 <div class="col-md-4">
-                  <input type="password" class="form-control" placeholder="Password">
+                  <input type="password" class="form-control" name="password" placeholder="Password">
                 </div>
                  <div class="col-md-4">
-                  <input type="password" class="form-control" placeholder="konfirmasi Password">
+                  <input type="password" class="form-control" name="konfirmasi-password" placeholder="konfirmasi Password">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-4">
+                  <select class="form-control" name="jk" required>
+                     <option value="">-Pilih Jenis Kelamin-</option>
+                    <option value="L">L</option>
+                    <option value="P">P</option>
+                 </select>
+                </div>
+
+                <div class="col-md-4">
+                  <select class="form-control" name="agama" required>
+                    <option value="">-Pilih Agama-</option>
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Budha">Budha</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Lainnya">Lainnya</option>
+                 </select>
+                </div>
+
+                <div class="col-md-4">
+                  <input type="number" class="form-control" name="sekolahasal" placeholder="Asal Sekolah">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-6">
-                  <select class="form-control">
-                    <option value=""> -Pilih Jenis Kelamin-</option>
-                 </select>
+                  <input type="text" class="form-control" name="namaortu" placeholder="Nama Orangtua">
                 </div>
+
                 <div class="col-md-6">
-                  <select class="form-control">
-                    <option value=""> -Pilih Program-</option>
-                 </select>
+                  <input type="number" class="form-control" name="nohportu" placeholder="No Hp Orangtua">
                 </div>
               </div>
 
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea name="" id="" class="form-control" placeholder="Alamat" cols="10" rows="3"></textarea>
+                  <textarea name="alamat" id="" class="form-control" placeholder="Alamat" cols="10" rows="3"></textarea>
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-md-3 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Daftar">
+                  <input type="submit" name="tambah" class="btn btn-block btn-primary text-white py-3 px-5" value="Daftar">
                 </div>
               </div>
             </form>

@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <title>Kiddy &mdash; Website Template by Colorlib</title>
+   <title>Rumah Belajar Sragen</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -51,9 +51,9 @@
           <div class="row align-items-center ">
 
             <div class="col-md-5 mt-5 pt-5">
-              <span class="text-cursive h5 text-red">Welcome To Our Website</span>
-              <h1 class="mb-3 font-weight-bold text-teal">Artikel</h1>
-              <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>About</strong></p>
+              <span class="text-cursive h5 text-red">Selamat Datang</span>
+              <h1 class="mb-3 font-weight-bold text-teal">Blog</h1>
+              <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Blog</strong></p>
             </div>
             
           </div>
@@ -61,136 +61,67 @@
       </div>
     </div>
 
-    
-
-    <div class="site-section">
+    <div class="site-section bg-light" id="contact-section">
       <div class="container">
+        <div class="row justify-content-center text-center">
+        <div class="col-7 text-center mb-0">
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-lg-12 mb-0" >
+            <form action="blog.php" method="get">
+              <div class="form-group row">
+                <div class="col-md-8">
+                  <input type="text" name="cari" class="form-control" placeholder="Cari Judul / Deskripsi Artikel" value="<?=(isset($_GET['cari']) ? $_GET['cari']:'')?>">
+                </div>
+                <div class="col-md-4">
+                   <input type="submit" class="btn btn-primary text-white py-3 px-5" value="Cari">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section" style="margin-top:-160px;">
+      <div class="container">
+        
+          <?php
+              $par=isset($_GET['cari']) ? $_GET['cari']:'';
+
+              $no = 0;
+              if($par==''){
+                $sql = "SELECT * FROM tb_blog";
+              }else{
+                $sql = "SELECT * FROM tb_blog where judul like '%$par%' or isi like '%$par%'";
+              }
+              
+              foreach (_dataGetAll($mysqli, $sql) as $key => $value) :
+                extract($value);
+              ?>
+                            
         <div class="row mb-3">
           <div class="col-md-4">
-            <img src="images/blog/blog1.jpg" alt="Image" class="img-fluid">
+            <img src="images/blog/<?=$foto?>" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-7 ml-auto pl-md-5">
-            <span class="text-cursive h5 text-red">Artikel</span>
-            <h3 class="text-black">BEST TEACHER</h3>
-            <p><span>Selamat kepada Mr. Harun telah menjadi "BEST TEACHER" third period Tahun ajaran 2021/2022 Rumah Belajar Sregen. Semoga bisa menjadi teladan, panutan, semangat berprestasi, dan semangat berkereatifitas bagi rekan-rekan lainnya.</span></p>
+            <span class="text-cursive h5 text-red"><?=$jenis?></span>
+            <h3 class="text-black"><?=$judul?></h3>
+            <p><span><?=$isi?></span></p>
 
-            <p class="mt-5"><a href="#" class="btn btn-warning py-4 btn-custom-1">Detail</a></p>
+            <p class="mt-5"><a href="blog_detail.php?id=<?=$idblog?>" class="btn btn-warning py-4 btn-custom-1">Detail</a></p>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-4">
-            <img src="images/blog/blog2.jpg" alt="Image" class="img-fluid">
-          </div>
-          <div class="col-md-7 ml-auto pl-md-5">
-            <span class="text-cursive h5 text-red">Artikel</span>
-            <h3 class="text-black">Congratulation</h3>
-            <p><span>Selamat buat mba Nafeeza telah meraih juara 1 English Speech Competition dalam acara Milad SD Birrul Walidain... Mba Nafeeza adalah salah satu siswa dari program Good Morning.. Semoga sukses selalu.. We proud of you.</span></p>
+        <?php endforeach; ?>
 
-            <p class="mt-5"><a href="#" class="btn btn-warning py-4 btn-custom-1">Detail</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    
-    
-    <div class="site-section bg-info">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <span class="text-cursive h5 text-red d-block">Packages You Like</span>
-            <h2 class="text-white">Our Packages</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="package text-center bg-white">
-              <span class="img-wrap"><img src="images/flaticon/svg/001-jigsaw.svg" alt="Image" class="img-fluid"></span>
-              <h3 class="text-teal">Indoor Games</h3>
-              <p>Lorem ipsum dolor sit amet. Consequatur aliquam, fuga maiores amet quo corporis distinctio soluta recusandae?</p>
-              <p><a href="#" class="btn btn-primary btn-custom-1 mt-4">Learn More</a></p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="package text-center bg-white">
-              <span class="img-wrap"><img src="images/flaticon/svg/002-target.svg" alt="Image" class="img-fluid"></span>
-              <h3 class="text-success">Outdoor Game and Event</h3>
-              <p>Lorem ipsum dolor sit amet. Consequatur aliquam, fuga maiores amet quo corporis distinctio soluta recusandae?</p>
-              <p><a href="#" class="btn btn-warning btn-custom-1 mt-4">Learn More</a></p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="package text-center bg-white">
-              <span class="img-wrap"><img src="images/flaticon/svg/003-mission.svg" alt="Image" class="img-fluid"></span>
-              <h3 class="text-danger">Camping for Kids</h3>
-              <p>Lorem ipsum dolor sit amet. Consequatur aliquam, fuga maiores amet quo corporis distinctio soluta recusandae?</p>
-              <p><a href="#" class="btn btn-success btn-custom-1 mt-4">Learn More</a></p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
     
-
     <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <h2 class="footer-heading mb-3">About Us</h2>
-                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-
-                <h2 class="footer-heading mb-4">Newsletter</h2>
-                <form action="#" class="d-flex" class="subscribe">
-                  <input type="text" class="form-control mr-3" placeholder="Email">
-                  <input type="submit" value="Send" class="btn btn-primary">
-                </form>
-          </div>
-          <div class="col-lg-8 ml-auto">
-            <div class="row">
-              <div class="col-lg-4 ml-auto">
-                <h2 class="footer-heading mb-4">Navigation</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-4">
-                <h2 class="footer-heading mb-4">Navigation</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-                
-              </div>
-
-              
-              
-            </div>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-              <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>.Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
-
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <?php require_once '_footer.php'; ?>
     </footer>
 
     </div>

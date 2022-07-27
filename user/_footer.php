@@ -1,32 +1,5 @@
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <h2 class="footer-heading mb-3">Tentang Kami</h2>
-                <p class="mb-5">Bimbel Rumah Belajar Sragen, siap mendampingi putra putri anda dalam belajar.</p>
-          </div>
-          <div class="col-lg-8 ml-auto">
-            <div class="row">
-              <div class="col-lg-4 ml-auto">
-
-              </div>
-              <div class="col-lg-4">
-                <h2 class="footer-heading mb-4">Navigation</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">Tentang Kita</a></li>
-                  <li><a href="#">Guru</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">Program</a></li>
-                  <li><a href="#">Pendaftaran</a></li>
-                </ul>
-                
-              </div>
-
-              
-              
-            </div>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row pt-1 mt-0 text-center">
           <div class="col-md-12">
             <div class="border-top pt-5">
               <p>

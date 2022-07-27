@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
-    
-
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -44,6 +42,11 @@
         <?php require_once '_header.php'; ?>
       </header>
 
+      <?php
+        if(isset($_GET['id']))
+          extract(_dataGetId($mysqli,"tb_profil","idprofil='".$_GET['id']."'"));
+      ?>
+
     <div class="ftco-blocks-cover-1">
        <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
       <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')">
@@ -51,9 +54,8 @@
           <div class="row align-items-center ">
 
             <div class="col-md-5 mt-5 pt-5">
-              <span class="text-cursive h5 text-red">Welcome To Our Website</span>
-              <h1 class="mb-3 font-weight-bold text-teal">Artikel</h1>
-              <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>About</strong></p>
+              <h1 class="mb-3 font-weight-bold text-teal">Profil</h1>
+              <p><a href="index.html" class="text-white">Home</a> <span class="mx-3">/</span> <strong>Profil Kami</strong></p>
             </div>
             
           </div>
@@ -70,14 +72,10 @@
             <img src="images/profil/profil1.jpg" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-7 ml-auto pl-md-5">
-            <span class="text-cursive h5 text-red">Profile</span>
-           <p><strong>Visi </strong>: menciptakan pendidikan anak yang berkarakter.<br />
-              <strong>Misi </strong>: menciptakan pendidikan anak yang cerdas dan menyenangkan.<br />
-              &nbsp;</p>
+            <span class="text-cursive h5 text-red"><?=$judul?></span>
 
-          <p><strong>Direktur Utama</strong> : &nbsp;Aziz Maula Rahman<br />
-          <strong>Direktur Pelaksana</strong> : Irma Widianingrum<br />
-          <strong>Kepala Bimbel Rumah Belajar Sragen</strong> : Arina Mukti Shofia</p>
+            <p><?=$isi?></p>
+
           </div>
         </div>
 

@@ -35,26 +35,26 @@
                    <li class="dropdown">
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profil <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                           <li  class="nav-link"><a href="#"> Visi Misi</a></li>
-                           <li  class="nav-link"><a href="#"> Program</a></li>
+
+                          <?php
+                            $no = 0;
+                            $sql = "SELECT * FROM tb_profil";
+                            foreach (_dataGetAll($mysqli, $sql) as $key => $value) :
+                              extract($value);
+                            ?>
+                             <li  class="nav-link"><a href="profil.php?id=<?=$idprofil?>"><?=$judul?></a></li>
+                          <?php endforeach; ?>
                         </ul>
                   </li>
                   
                   <li><a href="guru.php" class="nav-link">Guru</a></li>
                   <li><a href="gallery.php" class="nav-link">Gallery</a></li>
                   <li><a href="program.php" class="nav-link">Program</a></li>
-                  <li class="dropdown">
-                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                           <li  class="nav-link"><a href="#"> Artikel</a></li>
-                           <li  class="nav-link"><a href="#"> Berita</a></li>
-                            <li  class="nav-link"><a href="#"> Pengumuman</a></li>
-                        </ul>
-                  </li>
+                   <li><a href="blog.php" class="nav-link">Blog</a></li>
 
                   <li><a href="pendaftaran.php" class="nav-link">Pendaftaran</a></li>
                   <li><a href="kontak.php" class="nav-link">Kontak</a></li>
-                  <li><a href="../" class="nav-link">Login</a></li>
+                  <li><a href="../login.php" class="nav-link">Login</a></li>
 
                  
                 </ul>

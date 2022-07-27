@@ -78,7 +78,8 @@
               ?>
                 
               <div class="col-md-3 mb-4">
-                <a href="images/gallery/<?=$foto?>" data-fancybox="gal"><img src="images/gallery/<?=$foto?>" alt="Image" title="<?=$judul?>" class="img-fluid"></a>
+                <a href="images/gallery/<?=$foto?>" data-fancybox="gal"><img src="images/gallery/<?=$foto?>" alt="Image" title="<?=$judul?>" class="img-fluid">
+                  <span class="text-cursive h5 text-red d-block text-center"><?=$judul?></span></a>
             </div>
 
             <?php endforeach; ?>
