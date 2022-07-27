@@ -19,8 +19,8 @@
               <img src="https://via.placeholder.com/80x80" alt="">
             </div>
             <div class="info text-center">
-              <p class="name font-weight-bold mb-0">Siswa</p>
-              <p class="email text-muted mb-3">Akses Siswa</p>
+              <p class="name font-weight-bold mb-0">Pemilik</p>
+              <p class="email text-muted mb-3">Pemilik Rb Sragen</p>
             </div>
           </div>
           <div class="dropdown-body">

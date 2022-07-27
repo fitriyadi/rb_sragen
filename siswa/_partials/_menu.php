@@ -10,7 +10,7 @@
 
 
    <li class="nav-item">
-    <a href="?hal=profil/data" class="nav-link">
+    <a href="?hal=profil/olah" class="nav-link">
       <i class="link-icon" data-feather="user"></i>
       <span class="link-title">Profil</span>
     </a>
@@ -24,7 +24,7 @@
   </li>
 
      <li class="nav-item">
-    <a href="?hal=pendaftaran/data" class="nav-link">
+    <a href="?hal=pembayaran/data" class="nav-link">
       <i class="link-icon" data-feather="activity"></i>
       <span class="link-title">Pendaftaran Paket</span>
     </a>

@@ -22,4 +22,9 @@ $_array_agama = array(
 		'Katolik' => "Katolik",
 		'Lainnya' => "Lainnya",
 	);
+
+$_array_level = array(
+		'admin' => "admin",
+		'pemilik' => "pemilik"
+	);
 ?>
