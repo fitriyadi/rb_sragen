@@ -26,41 +26,48 @@ $transaction_details = array(
 // Optional
 
 
+$namaorangtua="Nama namaorangtua";
+$alamat="Alamat namaorangtua";
+$nohportu="123";
+$biayadaftar="20000";
+$namaprogram="Program Data";
+$email="email@email.com";
+
 $billing_address = array(
-    'first_name'    => "Andri",
-    'last_name'     => "Litani",
-    'address'       => "Mangga 20",
-    'city'          => "Jakarta",
+    'first_name'    => $namaorangtua,
+    'last_name'     => "",
+    'address'       => $alamat,
+    'city'          => "",
     'postal_code'   => "16602",
-    'phone'         => "081122334455",
+    'phone'         => $nohportu,
     'country_code'  => 'IDN'
 );
 
 // Optional
 $shipping_address = array(
-    'first_name'    => "Obet",
-    'last_name'     => "Supriadi",
-    'address'       => "Manggis 90",
-    'city'          => "Jakarta",
+    'first_name'    => $namaorangtua,
+    'last_name'     => "",
+    'address'       => $alamat,
+    'city'          => "",
     'postal_code'   => "16601",
-    'phone'         => "08113366345",
+    'phone'         => $nohportu,
     'country_code'  => 'IDN'
 );
 
 $item_details = array (
     array(
-        'id' => 'a1',
-        'price' => 94000,
+        'id' => 'KODE',
+        'price' => $biayadaftar,
         'quantity' => 1,
-        'name' => "Apple"
+        'name' => $namaprogram
     ),
   );
 // Optional
 $customer_details = array(
-    'first_name'    => "Andri",
-    'last_name'     => "Litani",
-    'email'         => "andri@litani.com",
-    'phone'         => "081122334455",
+    'first_name'    => $namaorangtua,
+    'last_name'     => "",
+    'email'         => $email,
+    'phone'         => $nohportu,
     'billing_address'  => $billing_address,
     'shipping_address' => $shipping_address
 );
@@ -97,7 +104,7 @@ function printExampleWarningMessage() {
 <!DOCTYPE html>
 <html>
     <body>
-        <button id="pay-button">Pay!</button>
+        <button id="pay-button">Pembayaran!</button>
         <!-- TODO: Remove ".sandbox" from script src URL for production environment. Also input your client key in "data-client-key" -->
         <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="<?php echo Config::$clientKey;?>"></script>
         <script type="text/javascript">

@@ -28,7 +28,8 @@
 						<tbody>
 							<?php
 							$no = 0;
-							$sql = "SELECT *, tb_siswa.nama as namasiswa FROM  tb_siswa join tb_siswa_daftar using(iddaftar) join tb_program using(idprogram) limit 1";
+							$iddaftar=$_SESSION['siswa'];
+							$sql = "SELECT *, tb_siswa.nama as namasiswa FROM  tb_siswa join tb_siswa_daftar using(iddaftar) join tb_program using(idprogram) where iddaftar='$iddaftar'";
 							foreach (_dataGetAll($mysqli, $sql) as $key => $value) :
 								extract($value);
 							?>
