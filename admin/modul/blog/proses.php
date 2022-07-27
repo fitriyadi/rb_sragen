@@ -61,7 +61,7 @@ if (isset($_POST['tambah'])) {
 		"sssss",
 		$_POST['judul'],
 		$_POST['jenis'],
-		$foto,
+		$name,
 		$_POST['isi'],
 		$_POST['idblog']
 	);

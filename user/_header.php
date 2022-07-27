@@ -1,4 +1,4 @@
-        <?php
+<?php
   require_once '../setting/konstanta.php';
   require_once '../setting/koneksi.php';
   require_once '../setting/crud.php';
