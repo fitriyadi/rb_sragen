@@ -23,7 +23,7 @@
 								<th>Dibayar</th>
 								<th>Jenis Bayar</th>
 								<th>Status Bayar</th>
-								<th>#</th>
+								<!-- <th>#</th> -->
 							</tr>
 						</thead>
 						<tbody>
@@ -39,12 +39,12 @@
 									<td><?= tgl_indo($tanggalbayar) ?></td>
 									<td><?= $nama ?></td>
 									<td><?= $dibayar ?></td>
-									<td><?= $jenisbayar ?></td>
-									<td><?= $statusbayar ?></td>
-									<td>
+									<td><?= label_jenis_bayar($jenisbayar) ?></td>
+									<td><?= label_status_bayar($statusbayar) ?></td>
+									<!-- <td>
 										<?= _detail("?hal=materi/olah&id=$iddaftarpaket") ?> 
 										
-									</td>
+									</td> -->
 								</tr>
 							<?php endforeach; ?>
 						</tbody>

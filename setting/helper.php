@@ -36,4 +36,42 @@ function getAddress() {
 }
 
 
+function label_jenis_bayar($kode)
+{
+    switch ($kode) {
+        case 'Online':
+            return "<span class='badge badge-success'>Online</span>";
+            break;
+
+        case 'Langsung':
+            return "<span class='badge badge-primary'>Langsung</span>";
+            break;
+
+        default:
+            return "";
+            break;
+    }
+}
+
+function label_status_bayar($kode)
+{
+    switch ($kode) {
+        case 'Gagal':
+            return "<span class='badge badge-danger'>Gagal</span>";
+            break;
+
+        case 'Lunas':
+            return "<span class='badge badge-success'>Lunas</span>";
+            break;
+
+        case 'Proses':
+            return "<span class='badge badge-primary'>Proses</span>";
+            break;
+
+        default:
+            return "";
+            break;
+    }
+}
+
 ?>

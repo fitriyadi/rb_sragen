@@ -47,7 +47,7 @@ $stmt = $mysqli->prepare("INSERT INTO tb_siswa_daftar
         "ssssss",
         $iddaftar,
         $idprogram,
-        $$tanggal,
+        $tanggal,
         $biayadaftar,
         $jenisbayar,
         $statusbayar
