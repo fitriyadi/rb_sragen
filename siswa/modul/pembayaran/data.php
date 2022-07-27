@@ -22,6 +22,7 @@
 								<th>Nama Paket</th>
 								<th>Dibayar</th>
 								<th>Jenis Bayar</th>
+								<th>Status Bayar</th>
 								<th>#</th>
 							</tr>
 						</thead>
@@ -39,6 +40,7 @@
 									<td><?= $nama ?></td>
 									<td><?= $dibayar ?></td>
 									<td><?= $jenisbayar ?></td>
+									<td><?= $statusbayar ?></td>
 									<td>
 										<?= _detail("?hal=materi/olah&id=$iddaftarpaket") ?> 
 										

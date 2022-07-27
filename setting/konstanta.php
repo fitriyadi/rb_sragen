@@ -27,4 +27,9 @@ $_array_level = array(
 		'admin' => "admin",
 		'pemilik' => "pemilik"
 	);
+
+$_array_status_bayar = array(
+		'Gagal' => "Gagal",
+		'Lunas' => "Lunas"
+	);
 ?>

@@ -31,7 +31,27 @@ if (isset($_POST['tambah'])) {
 		echo "<script>window.location='javascript:history.go(-1)';</script>";
 	}
 
-}  else if (isset($_GET['hapus'])) {
+ }else if (isset($_POST['ubah'])) {
+
+	//Proses ubah data
+
+	$stmt = $mysqli->prepare("UPDATE tb_siswa_daftar  SET 
+		statusbayar=?
+		where iddaftarpaket=?");
+	$stmt->bind_param(
+		"ss",
+		$_POST['status'],
+		$_POST['iddaftarpaket']
+	);
+
+	if ($stmt->execute()) {
+		echo "<script>alert('Data pembayaran berhasil diubah')</script>";
+		echo "<script>window.location='index.php?hal=pembayaran/data';</script>";
+	} else {
+		echo "<script>alert('Data pembayaran Gagal Disimpan')</script>";
+		echo "<script>window.location='javascript:history.go(-1)';</script>";
+	}
+}else if (isset($_GET['hapus'])) {
 
 	//Proses hapus
 	$stmt = $mysqli->prepare("DELETE FROM tb_siswa_daftar where iddaftarpaket=?");
