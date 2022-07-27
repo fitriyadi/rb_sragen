@@ -39,10 +39,9 @@
 									<td><?= $email ?></td>
 									<td><?= $statusdaftar ?></td>
 									<td>
-										<?= _detail("?hal=materi/proses&hapus=$iddaftar") ?>
-										<?= _edit("?hal=materi/olah&id=$iddaftar") ?> 
-										<?= _hapus("?hal=materi/olah&id=$iddaftar") ?> 
-										
+										<?= _detail("?hal=pendaftaran/detail&id=$iddaftar") ?> 
+										<?= _edit("?hal=pendaftaran/olah&id=$iddaftar") ?> 
+										<?= _hapus("?hal=pendaftaran/proses&hapus=$iddaftar") ?>
 									</td>
 								</tr>
 							<?php endforeach; ?>

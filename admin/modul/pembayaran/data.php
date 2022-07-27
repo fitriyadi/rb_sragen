@@ -13,18 +13,15 @@
 					<div class="row">
 					 <div class="col-sm-3">Data Pembayaran Siswa
 							
-						</div>
-
+					</div>
 					 <div class="col-sm-4">
-						<select class="select2 w-100" name="jk">
-                             
-                                    <option value="Pilih Mater">- Pilih Pembayaran-</option>
-                               
+						<select class="select2 w-100" name="jenis">
+                           	<option value="Pilih Mater">- Pilih Pembayaran-</option>
                          </select>
                      </div>
                      <div class="col-sm-4">
 					<?= _cari("?hal=dataset/import") ?>
-					<?= _tambah("?hal=dataset/import") ?>
+					<?= _tambah("?hal=pembayaran/olah") ?>
 				</div>
 				
 				</div>
@@ -57,8 +54,11 @@
 									<td><?= $dibayar ?></td>
 									<td><?= $jenisbayar ?></td>
 									<td>
-										<?= _edit("?hal=materi/olah&id=$iddaftarpaket") ?> 
-										<?= _hapus("?hal=materi/olah&id=$iddaftarpaket") ?> 
+										<?php if($jenisbayar=='Online'){ ?>
+											<?= _edit("?hal=pembayaran/ubah&id=$iddaftarpaket")?> 
+										<?php } ?>
+
+										<?= _hapus("?hal=pembayaran/proses&hapus=$iddaftarpaket") ?>
 										
 									</td>
 								</tr>

@@ -8,4 +8,18 @@ $_array_jenis = array(
 		'Berita' => "Berita",
 		'Pengumuman' => "Pengumuman"
 	);
+
+$_array_jk = array(
+		'L' => "L",
+		'P' => "P"
+	);
+
+$_array_agama = array(
+		'Islam' => "Islam",
+		'Kristen' => "Kristen",
+		'Hindu' => "Hindu",
+		'Budha' => "Budha",
+		'Katolik' => "Katolik",
+		'Lainnya' => "Lainnya",
+	);
 ?>

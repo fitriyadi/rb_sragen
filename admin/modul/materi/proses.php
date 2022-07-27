@@ -54,7 +54,7 @@ if (isset($_POST['tambah'])) {
 } else if (isset($_GET['hapus'])) {
 
 	//Proses hapus
-	$stmt = $mysqli->prepare("DELETE FROM tb_materi where idprogram=?");
+	$stmt = $mysqli->prepare("DELETE FROM tb_materi where idmateri=?");
 	$stmt->bind_param("s", $_GET['hapus']);
 	if ($stmt->execute()) {
 		echo "<script>alert('Data materi Berhasil Dihapus')</script>";

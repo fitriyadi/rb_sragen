@@ -53,7 +53,7 @@
 									<td>
 										<?= _download($link) ?>
 										<?= _edit("?hal=materi/olah&id=$idmateri") ?> 
-										<?= _hapus("?hal=materi/olah&id=$idmateri") ?> 
+										<?= _hapus("?hal=materi/proses&hapus=$idmateri") ?>
 										
 									</td>
 								</tr>
