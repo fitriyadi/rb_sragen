@@ -50,10 +50,10 @@
         <div class="container">
           <div class="row align-items-center ">
             <div class="col-md-5 mt-5 pt-5">
-              <span class="text-cursive h5 text-red">Selamat Datan di website Kami</span>
+              <span class="text-cursive h5 text-red">Selamat Datang di Website Kami</span>
               <h1 class="mb-3 font-weight-bold text-teal">Majukan pendidikan anak</h1>
               <p>Tempat Belajar Menyenangkan</p>
-              <p class="mt-5"><a href="#" class="btn btn-primary py-4 btn-custom-1">Selengkapnya</a></p>
+              <!--<p class="mt-5"><a href="#" class="btn btn-primary py-4 btn-custom-1">Selengkapnya</a></p>-->
             </div>
             <div class="col-md-6 ml-auto align-self-end">
               <img src="images/kid_transparent.png" alt="Image" class="img-fluid">
@@ -70,28 +70,28 @@
           <div class="col-lg-4">
             <div class="block-2 red">
               <span class="wrap-icon">
-                <span class="icon-home"></span>
+                <span class="icon-cog"></span>
               </span>
-              <h2>Permainan menyenangkan</h2>
-              <p>Belajar akan menyenangkan disertai dengan game yang disediakan dan sesuai jenajng umur.</p>
+              <h2>Belajar dan Bermain</h2>
+              <p>Pembelajaran yang lebih menyenangkan disertai dengan bermain yang disediakan dan sesuai jenjang umur.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="block-2 yellow">
               <span class="wrap-icon">
-                <span class="icon-person"></span>
+                <span class="icon-home"></span>
               </span>
-              <h2>Banyak permainan dan hiburan</h2>
-              <p>Permainan yang beragam membuat anak akan semakin kreatif dan tidak cepat bosan.</p>
+              <h2>Banyak Permainan dan Hiburan</h2>
+              <p>Tempat yang menarik dengan banyak permainan dan hiburan edukatif yang tidak cepat bosan.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="block-2 teal">
               <span class="wrap-icon">
-                <span class="icon-cog"></span>
+                <span class="icon-person"></span>
               </span>
-              <h2>Eksplorasi Anak</h2>
-              <p>Anak akan diajarkan untuk eksplorasi pada hobi yang disukai dan sesuai dengan keinginan.</p>
+              <h2>Pendidikan Berkarakter</h2>
+              <p>Pendidikan secara non-formal dengan adanya pembentukan karakter anak menciptakan anak yang cerdas dan berkarakter.</p>
             </div>
           </div>
         </div>
@@ -105,11 +105,11 @@
             <img src="images/img_1.jpg" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-5 ml-auto pl-md-5">
-            <span class="text-cursive h5 text-red">Tentang Kira</span>
+            <span class="text-cursive h5 text-red">Tentang Kami</span>
             <h3 class="text-black">Belajar dengan riang gembira</h3>
-            <p>Rumah belajar sragen merupakan usaha yang melayani siswa dalam proses pemantapan materi atau dengan kata lain bimbingan belajar. Rumah belajar sragen terletak di Jl. Slamet Riyadi No.157, Dusun Kebayanan Krajoyok, Sragen Tengah, Kec. Sragen, Kabupaten Sragen, Jawa Tengah 57211</p>
+            <p>Rumah Belajar Sragen merupakan bimbingan belajar yang melayani siswa dalam proses pemantapan materi. Harapan kami dapat menciptakan anak-anak yang cerdas dan berkarakter.</p>
 
-            <p class="mt-5"><a href="#" class="btn btn-warning py-4 btn-custom-1">Kontak</a></p>
+            <p class="mt-5"><a href="https://api.whatsapp.com/send?phone=6285728644064&amp;" class="btn btn-warning py-4 btn-custom-1">Kontak</a></p>
           </div>
         </div>
       </div>

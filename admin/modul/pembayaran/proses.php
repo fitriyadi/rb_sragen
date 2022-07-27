@@ -4,8 +4,8 @@ $tanggal=date('Y-m-d');
 
 if (isset($_POST['tambah'])) {
 	//Proses penambahan index
-
-	$dibayar="200000";
+	$idprogram=$_POST['idprogram'];
+	$dibayar=_dataCustom($mysqli,"select biayadaftar from tb_program where idprogram='$idprogram'");
 	$jenisbayar="Langsung";
 	$statusbayar="Lunas";
 
